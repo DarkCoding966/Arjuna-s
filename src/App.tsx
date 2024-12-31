@@ -1,32 +1,20 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import HomeView from './sections/home/home-view/home-view'
+import NotLogin from './sections/NotLogin/NotLogin'
+import { Box } from '@mui/material'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import HomeView from './sections/home/home-view/home-view';
 
 function App() {
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Team Arujna's</h1>
-      <div className="card">
-        <button >
-         create a new project
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router>
+    <Box sx={{BackgroundColor:"#000"}}>
+    </Box>
+    <Routes>
+      <Route path='/' element={<NotLogin />} />
+      <Route path='/home' element={<HomeView />} />
+    </Routes>
+    </Router>
   )
 }
 
